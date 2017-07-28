@@ -10,11 +10,15 @@
 		2712F9B08F002BA3368D405A /* Pods_Toggle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF1E07C0EFBC04E528B028FA /* Pods_Toggle.framework */; };
 		2E08DC621A4E666A55195062 /* Pods_ToggleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EC9C93A5061E746D2C2FAD /* Pods_ToggleTests.framework */; };
 		543C37421F2BDC3F00C56912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543C37411F2BDC3F00C56912 /* AppDelegate.swift */; };
-		543C37441F2BDC3F00C56912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543C37431F2BDC3F00C56912 /* ViewController.swift */; };
+		543C37441F2BDC3F00C56912 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543C37431F2BDC3F00C56912 /* SettingsViewController.swift */; };
 		543C37471F2BDC3F00C56912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543C37451F2BDC3F00C56912 /* Main.storyboard */; };
 		543C37491F2BDC3F00C56912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 543C37481F2BDC3F00C56912 /* Assets.xcassets */; };
 		543C374C1F2BDC3F00C56912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543C374A1F2BDC3F00C56912 /* LaunchScreen.storyboard */; };
 		543C37571F2BDC3F00C56912 /* ToggleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543C37561F2BDC3F00C56912 /* ToggleTests.swift */; };
+		54BAF0531F2BDE02006AEA37 /* Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF0501F2BDE02006AEA37 /* Toggle.swift */; };
+		54BAF0541F2BDE02006AEA37 /* NetworkToggleStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF0511F2BDE02006AEA37 /* NetworkToggleStorage.swift */; };
+		54BAF0551F2BDE02006AEA37 /* ToggleStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF0521F2BDE02006AEA37 /* ToggleStorage.swift */; };
+		54BAF0591F2BE3E0006AEA37 /* ToggleValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BAF0581F2BE3E0006AEA37 /* ToggleValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +37,7 @@
 		41BF3AA881A2B1F5B44C0FED /* Pods-Toggle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toggle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Toggle/Pods-Toggle.debug.xcconfig"; sourceTree = "<group>"; };
 		543C373E1F2BDC3F00C56912 /* Toggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		543C37411F2BDC3F00C56912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		543C37431F2BDC3F00C56912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		543C37431F2BDC3F00C56912 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		543C37461F2BDC3F00C56912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		543C37481F2BDC3F00C56912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		543C374B1F2BDC3F00C56912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +45,10 @@
 		543C37521F2BDC3F00C56912 /* ToggleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToggleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		543C37561F2BDC3F00C56912 /* ToggleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleTests.swift; sourceTree = "<group>"; };
 		543C37581F2BDC3F00C56912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54BAF0501F2BDE02006AEA37 /* Toggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toggle.swift; sourceTree = "<group>"; };
+		54BAF0511F2BDE02006AEA37 /* NetworkToggleStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkToggleStorage.swift; sourceTree = "<group>"; };
+		54BAF0521F2BDE02006AEA37 /* ToggleStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleStorage.swift; sourceTree = "<group>"; };
+		54BAF0581F2BE3E0006AEA37 /* ToggleValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleValue.swift; sourceTree = "<group>"; };
 		A5EC9C93A5061E746D2C2FAD /* Pods_ToggleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToggleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA55BA60B9D8055444DB3020 /* Pods-ToggleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToggleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToggleTests/Pods-ToggleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF1E07C0EFBC04E528B028FA /* Pods_Toggle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Toggle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,8 +97,9 @@
 		543C37401F2BDC3F00C56912 /* Toggle */ = {
 			isa = PBXGroup;
 			children = (
+				54BAF0561F2BDE06006AEA37 /* Toggle */,
 				543C37411F2BDC3F00C56912 /* AppDelegate.swift */,
-				543C37431F2BDC3F00C56912 /* ViewController.swift */,
+				543C37431F2BDC3F00C56912 /* SettingsViewController.swift */,
 				543C37451F2BDC3F00C56912 /* Main.storyboard */,
 				543C37481F2BDC3F00C56912 /* Assets.xcassets */,
 				543C374A1F2BDC3F00C56912 /* LaunchScreen.storyboard */,
@@ -106,6 +115,25 @@
 				543C37581F2BDC3F00C56912 /* Info.plist */,
 			);
 			path = ToggleTests;
+			sourceTree = "<group>";
+		};
+		54BAF0561F2BDE06006AEA37 /* Toggle */ = {
+			isa = PBXGroup;
+			children = (
+				54BAF0501F2BDE02006AEA37 /* Toggle.swift */,
+				54BAF0581F2BE3E0006AEA37 /* ToggleValue.swift */,
+				54BAF0521F2BDE02006AEA37 /* ToggleStorage.swift */,
+				54BAF0571F2BDE0E006AEA37 /* Storage */,
+			);
+			name = Toggle;
+			sourceTree = "<group>";
+		};
+		54BAF0571F2BDE0E006AEA37 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				54BAF0511F2BDE02006AEA37 /* NetworkToggleStorage.swift */,
+			);
+			name = Storage;
 			sourceTree = "<group>";
 		};
 		7046E0B8BFDE4FC67751EEC7 /* Frameworks */ = {
@@ -330,7 +358,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				543C37441F2BDC3F00C56912 /* ViewController.swift in Sources */,
+				54BAF0541F2BDE02006AEA37 /* NetworkToggleStorage.swift in Sources */,
+				54BAF0591F2BE3E0006AEA37 /* ToggleValue.swift in Sources */,
+				54BAF0531F2BDE02006AEA37 /* Toggle.swift in Sources */,
+				543C37441F2BDC3F00C56912 /* SettingsViewController.swift in Sources */,
+				54BAF0551F2BDE02006AEA37 /* ToggleStorage.swift in Sources */,
 				543C37421F2BDC3F00C56912 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +573,7 @@
 				543C375D1F2BDC3F00C56912 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		543C375E1F2BDC3F00C56912 /* Build configuration list for PBXNativeTarget "ToggleTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +582,7 @@
 				543C37601F2BDC3F00C56912 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
