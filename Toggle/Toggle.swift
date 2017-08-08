@@ -46,7 +46,7 @@ final class Toggle {
             }
             .do(onNext: { _ in isBusySubject.value = false })
 
-        let value = Observable.concat(initialValue, valueAfterSaving)
+        let value = Observable.merge(initialValue, valueAfterSaving)
             .asDriver(onErrorRecover: { Driver.just(ToggleValue.unknown($0)) })
 
         return (value: value, isBusy: isBusy)
