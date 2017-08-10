@@ -25,26 +25,27 @@ final class Toggle {
 
     func manage(change: Observable<Bool>) -> (value: Driver<ToggleValue>, isBusy: Driver<Bool>) {
         let storage = self.storage
-        let isBusySubject = Variable<Bool>(true)
+        let isBusySubject = PublishSubject<Bool>()
 
         let isBusy = isBusySubject
-            .asDriver()
+            .asDriver(onErrorJustReturn: false)
+            .startWith(true)
 
         let initialValue = storage
             .read()
             .map { ToggleValue.initial($0) }
             .catchError { Observable.just( ToggleValue.unknown($0) ) }
-            .do(onNext: { _ in isBusySubject.value = false })
+            .do(onNext: { _ in isBusySubject.onNext(false) })
 
         let valueAfterSaving = change
-            .do(onNext: { _ in isBusySubject.value = true })
+            .do(onNext: { _ in isBusySubject.onNext(true) })
             .flatMap { valueToSave -> Observable<ToggleValue> in
                 storage
                     .save(value: valueToSave)
                     .map { ToggleValue.updated(valueToSave) }
                     .catchErrorJustReturn(ToggleValue.fallback(!valueToSave))
             }
-            .do(onNext: { _ in isBusySubject.value = false })
+            .do(onNext: { _ in isBusySubject.onNext(false) })
 
         let value = Observable.merge(initialValue, valueAfterSaving)
             .asDriver(onErrorRecover: { Driver.just(ToggleValue.unknown($0)) })
