@@ -29,26 +29,22 @@ final class NetworkToggleStorage: ToggleStorage {
 
     func read() -> Observable<Bool> {
         return Observable.just(value)
-            .delay(3, scheduler: MainScheduler.instance)
+            .delay(.seconds(3), scheduler: MainScheduler.instance)
     }
 
     func save(value: Bool) -> Observable<Void> {
         let simulateError = shouldFail()
 
         return Observable.just(())
-            .delay(1, scheduler: MainScheduler.instance)
-            .flatMap { _ -> Observable<Void> in
+            .delay(.seconds(3), scheduler: MainScheduler.instance)
+            .flatMapLatest { [weak self] _ -> Observable<Void> in
                 if simulateError {
-                    return .error(NetworkToggleStorageError.savingError)
+                    return Observable.error(NetworkToggleStorageError.savingError)
                 } else {
-                    return .just()
+                    self?.value = value
+                    return Observable.just(())
                 }
             }
-            .do(onNext: { [weak self] in
-                if !simulateError {
-                    self?.value = value // update saved value
-                }
-            })
     }
 
     // MARK: - Private
